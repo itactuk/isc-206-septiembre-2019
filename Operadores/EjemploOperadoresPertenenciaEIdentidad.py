@@ -13,6 +13,7 @@ print("Jose" in [1,4,4654,6, "Miguel"])
 # is not
 
 # is se utilizar para ver si dos objetos son iguales. Usualmente se usa con None
+# el is solo se utiliza con None en vez de usar ==
 estudiante = None
 print(estudiante is None)
 print(estudiante is not None)
