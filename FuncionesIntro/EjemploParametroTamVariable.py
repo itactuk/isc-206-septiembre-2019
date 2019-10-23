@@ -1,7 +1,10 @@
 
 # ENTRADA: 3, 4, 5, 6
 # SALIDA: 7, 8, 9
-def suma_primer_valor_al_resto(valor_a_sumar, *valores):
+from typing import List
+
+
+def suma_primer_valor_al_resto(valor_a_sumar: float, *valores) -> List:
     lista_res = []
     for v in valores:
         lista_res.append(v + valor_a_sumar)  # Append agrega un elemento a la lista
@@ -18,6 +21,7 @@ def mayor(*valores): # Cuando se pone el asterisco, la variable es una tupla
 # Ejemplos de llamar la funcion
 print(mayor(2,3,6,7))
 print(mayor(2,3))
+
 
 res = suma_primer_valor_al_resto(4,55,7,8)
 print(res)

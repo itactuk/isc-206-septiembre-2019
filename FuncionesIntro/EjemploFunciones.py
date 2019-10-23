@@ -11,6 +11,18 @@ def calc_fuerza(ac, masa):
     fuerza = ac * masa
     return fuerza
 
+dict_car_int={
+    "1": 1,
+    "2": 2,
+    "3": 3,
+}
+def int(string):
+    acc = 0
+    for s in string:
+        d = dict_car_int[s]
+        acc *= 10
+        acc += d
+    return acc
 
 lista_n = []
 n = int(input("Cantidad de numeros a digitar: "))
