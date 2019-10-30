@@ -1,4 +1,5 @@
 import unittest
+import Secuencias.EjemploContarComoYHolas as hola
 
 class MisPruebas(unittest.TestCase):
     def test_indice_lista(self):
@@ -75,3 +76,16 @@ class MisPruebas(unittest.TestCase):
     def test_string_slicing(self):
         texto = "hola como estas"
         self.assertEqual("a como est", texto[3:-2])
+
+    def test_ejemplo_hola(self):
+        texto = "holas hola holas como"
+        self.assertEqual({'holas':2, 'como': 1}, hola.contar_como_holas(texto))
+
+    def test_ejemplo_extrae_parametros_simple(self):
+        texto = """def contar_como_holas(texto: str) -> Dict[str, int]:
+    holas = texto.count("holas")
+    como = texto.count("como")
+    d = {'holas': holas, 'como': como}
+    return d
+"""
+        self.assertEqual(["texto"], hola.extrae_nombre_funcion(texto))
